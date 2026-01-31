@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/select"
 
 import { Input } from "./ui/input";
-import type { NodeTrigger, NodeType, TriggerSheetProps } from "@/types/types";
+import type { NodeTrigger, NodeType, TriggerSheetProps } from "@repo/common";
 import { Label } from "./ui/label";
 
 const TRIGGER_TYPES: { id: NodeTrigger; label: string; }[] = [{

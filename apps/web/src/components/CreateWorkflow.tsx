@@ -11,7 +11,7 @@ import {
 import '@xyflow/react/dist/style.css';
 import { TriggerSheet } from './TriggerSheet';
 import { PriceTrigger, TimeTrigger } from '@/nodes/triggers';
-import type { EdgeType, NodeType } from '@/types/types';
+import type { EdgeType, NodeType } from '@repo/common';
 import { ActionSheet } from './ActionSheet';
 import { Backpack, Hyperliquid, Lighter } from '@/nodes/actions';
 

@@ -1,7 +1,7 @@
 import { Handle, Position } from "@xyflow/react"
 import { Merge } from "lucide-react"
 import "../node.css"
-import type { TriggerProps } from "@/types/types"
+import type { TriggerProps } from "@repo/common"
 
 export function PriceTrigger({ data, isConnectable }: TriggerProps) {
     return (

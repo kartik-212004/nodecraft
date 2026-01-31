@@ -23,8 +23,9 @@ import {
     SheetHeader,
     SheetTitle,
 } from "@/components/ui/sheet"
-import type { NodeType } from "@/types/types"
 import { SUPPORTED_ASSETS } from "./TriggerSheet"
+
+import type { NodeType } from "@repo/common"
 
 const TRADING_LIST = ["backpack", "hyperliquid", "lighter"] as const
 

@@ -1,7 +1,7 @@
 import { Handle, Position } from "@xyflow/react"
 import { Clock } from "lucide-react"
 import "../node.css"
-import type { TriggerProps } from "@/types/types";
+import type { TriggerProps } from "@repo/common"
 
 export function TimeTrigger({ data, isConnectable }: TriggerProps) {
     const hours = data.metadata.time / 60;

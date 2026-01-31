@@ -1,5 +1,3 @@
-import type { ActionForm } from "@/components/ActionSheet";
-
 export type NodeKind = "action" | "trigger";
 export type NodeTrigger = "price-trigger" | "time-trigger";
 export type NodeAction = "backpack" | "hyperliquid" | "lighter";
@@ -8,6 +6,12 @@ export interface TriggerSheetProps {
     onCreateTrigger: (node: NodeType) => void;
 }
 
+interface ActionFormType {
+    action: string,
+    asset: string,
+    symbol: string,
+    quantity: number,
+}
 
 export interface EdgeType {
     id: string;
@@ -27,7 +31,7 @@ export type TriggerProps = {
 }
 export type ActionProps = {
     data: {
-        metadata: ActionForm
+        metadata: ActionFormType
     }
     isConnectable: boolean
 }
