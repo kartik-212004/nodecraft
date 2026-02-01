@@ -1,135 +1,60 @@
-# Turborepo starter
 
-This Turborepo starter is maintained by the Turborepo core team.
 
-## Using this example
 
-Run the following command:
+# Nodecraft
 
-```sh
-npx create-turbo@latest
+Nodecraft is a lightweight monorepo designed to accelerate development of Node-backed web applications. It provides a minimal server, a fast frontend, and shared utilities to reduce repetitive setup.
+
+Who it's for: developers who prefer sensible defaults, typed tooling, and a modular structure.
+
+Quick overview:
+
+- `apps/server` — server-side routes and middleware.
+- `apps/web` — Vite + React frontend.
+- `packages/common` — shared utilities and types.
+
+Get started:
+
+1. Install dependencies:
+
+```bash
+npm install
 ```
 
-## What's inside?
+2. Run development mode (from the repository root):
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+```bash
+npm run dev
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+3. Open the URL shown in the terminal to view the application.
 
-```
-# With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+Project description (chill language):
 
-# Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+Nodecraft stitches a small Node server to a Vite + React UI so you can prototype without the usual setup headache. It gives you ready-made routes, simple middleware hooks, and a fast dev loop so changes feel instant. Shared types and helpers keep things tidy — spin it up, wire your logic, and iterate quickly.
 
-### Develop
+Development notes:
 
-To develop all apps and packages, run the following command:
+- Keep changes small and focused; prefer modular packages and routes over large files.
+- Add shared utilities to `packages/common` and keep them typed.
+- Use the existing `tsconfig` and linting configuration for consistency.
 
-```
-cd my-turborepo
+Contributing:
 
-# With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
+Open a pull request with a concise description and a focused change. Small, testable improvements are preferred.
 
-# Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
+License:
 
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+Add the license you intend to use and include it in the repository.
 
-```
-# With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
 
-# Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
+## What It Does — Dope Edition
 
-### Remote Caching
+Nodecraft is the low-key engine that connects a nimble Node server with a fast Vite + React frontend so you can move from idea to demo without drama. It keeps the scaffolding light and the defaults smart so you spend less time wrangling setup and more time building.
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+- Server: ready-to-go routes and middleware to handle auth, webhooks, or background jobs.
+- Web: modular UI components and a Vite dev loop that reloads while you iterate.
+- Shared: `packages/common` holds utilities and types so you don't duplicate work.
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Spin it up, wire your logic, and ship the vibe — small footprint, big flow.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
